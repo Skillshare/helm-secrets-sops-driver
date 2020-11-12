@@ -1,0 +1,8 @@
+name: "secrets-sops-driver"
+version: "0.1.0"
+usage: "sops driver for helm-secrets plugin"
+description: |-
+  "Supports skipping the role in the sops file. Useful when using AWS Instance Profiles."
+command: "$HELM_PLUGIN_DIR/lib/run.sh"
+ignoreFlags: false
+useTunnel: false
