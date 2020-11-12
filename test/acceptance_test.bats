@@ -11,7 +11,7 @@ setup() {
 @test 'sets SECRET_DRIVER' {
 	run lib/run.sh
 	assert_success
-	assert_output --partial "SECRET_DRIVER=${HELM_PLUGIN_DIR}/lib/sk-sops.sh"
+	assert_output --partial "HELM_SECRET_DRIVER=${HELM_PLUGIN_DIR}/lib/sk-sops.sh"
 }
 
 @test 'forwards arguments' {
