@@ -29,7 +29,7 @@ driver_decrypt_file() {
 
 	scratch="$(mktemp)"
 
-	if [ "${SOPS_SKIP_KMS_ASSUME_ROLE:-}" = "1" || "${SOPS_SKIP_KMS_ASSUME_ROLE:-}" = "true" ]; then
+	if [ "${SOPS_SKIP_KMS_ASSUME_ROLE:-}" = "1" ] || [ "${SOPS_SKIP_KMS_ASSUME_ROLE:-}" = "true" ]; then
 		grep -vF 'role: arn:aws:iam::' "${input}" >"${scratch}"
 	else
 		cp "${input}" "${scratch}"
