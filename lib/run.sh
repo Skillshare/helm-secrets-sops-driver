@@ -5,7 +5,7 @@ set -euo pipefail
 main() {
 	local helm="${HELM_BIN:-helm}"
 
-	export HELM_SECRET_DRIVER="${HELM_PLUGIN_DIR}/lib/sk-sops.sh"
+	export HELM_SECRETS_DRIVER="${HELM_PLUGIN_DIR}/lib/sk-sops.sh"
 
 	exec "${helm}" "$@"
 }
